@@ -18,3 +18,7 @@ ng generate component components/pages/new-moment
 
 criaçao em routes
   {path: 'moments/new', component: NewMomentComponent},
+
+------------
+
+ng generate component components/moment-form
