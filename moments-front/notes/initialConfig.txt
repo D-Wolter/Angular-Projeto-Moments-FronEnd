@@ -12,3 +12,9 @@ ng generate component components/pages/about
 
 ng generate component components/pages/home
 
+-----------
+
+ng generate component components/pages/new-moment
+
+criaçao em routes
+  {path: 'moments/new', component: NewMomentComponent},
