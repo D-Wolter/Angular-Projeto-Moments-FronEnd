@@ -1,0 +1,14 @@
+npm install -g @angular/cli
+
+ng new moments
+
+npm run start   ou     ng start
+
+ng generate component components/header
+
+ng generate component components/footer
+
+ng generate component components/pages/about
+
+ng generate component components/pages/home
+
