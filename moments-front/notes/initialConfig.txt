@@ -22,3 +22,14 @@ criaçao em routes
 ------------
 
 ng generate component components/moment-form
+
+
+---------------
+
+
+ng generate service services/momment
+
+ng generate service services/comment
+
+ng generate service services/messages
+
