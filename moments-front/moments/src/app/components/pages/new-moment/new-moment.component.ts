@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MomentFormComponent } from "../../moment-form/moment-form.component";
+import { Moment } from '../../../Moment';
 
 @Component({
     selector: 'app-new-moment',
@@ -11,9 +12,15 @@ import { MomentFormComponent } from "../../moment-form/moment-form.component";
 export class NewMomentComponent {
   btnText = "Compartilhar!"
 
-  createHandler(event: any) {
-    console.log('deu boa');
-    
+  async createHandler(moment: Moment) {
+    const formData = new FormData()
+
+    formData.append('title', moment.title)
+    formData.append('description', moment.description)
+
+    if(moment.image) {
+      formData.append('image', moment.image)
+    }
   }
 
 }
