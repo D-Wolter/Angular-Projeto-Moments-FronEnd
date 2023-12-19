@@ -11,4 +11,9 @@ import { MomentFormComponent } from "../../moment-form/moment-form.component";
 export class NewMomentComponent {
   btnText = "Compartilhar!"
 
+  createHandler(event: any) {
+    console.log('deu boa');
+    
+  }
+
 }
