@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Moment } from '../../Moment';
 
 @Component({
   selector: 'app-moment-form',
@@ -10,7 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './moment-form.component.css'
 })
 export class MomentFormComponent {
-  @Input() btnText!: string
+  @Output() onSubmit = new EventEmitter<Moment>();
+  @Input() btnText!: string;
 
   momentForm!: FormGroup;
 
