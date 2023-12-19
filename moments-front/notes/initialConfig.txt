@@ -33,3 +33,31 @@ ng generate service services/comment
 
 ng generate service services/messages
 
+-------------------
+
+ng generate component components/messages
+
+ng add @fortawesome/angular-fontawesome
+    bibioteca com pacote de icones
+    ocorreu erro na instalacao
+    danie@DESKTOP-BQKJSHJ MINGW64 /c/programacao/Angular-Projeto-Moments-FronEnd/moments-front/moments (main)
+    $ ng add @fortawesome/angular-fontawesome
+    - Determining package manager...
+    i Using package manager: npm
+    - Searching for compatible package version...
+    √ Found compatible package version: @fortawesome/angular-fontawesome@0.14.0.
+    - Loading package information from registry...
+    √ Package information loaded.
+    No terminal detected. '--skip-confirmation' can be used to bypass installation confirmation. Ensure package name is correct prior to '--skip-confirmation' option usage.
+    Command aborted.
+    
+   npm install --save @fortawesome/fontawesome-svg-core \
+  @fortawesome/free-solid-svg-icons \
+  @fortawesome/angular-fontawesome
+
+    instalei manualmente via npm
+    npm install --save @fortawesome/angular-fontawesome@0.14.0
+    npm install --save @fortawesome/free-solid-svg-icons
+
+
+

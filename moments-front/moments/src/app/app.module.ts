@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes';
-import { MomentService } from './services/moment.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [],
