@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { MomentFormComponent } from "../../moment-form/moment-form.component";
 import { Moment } from '../../../Moment';
+import { MomentService } from '../../../services/moment.service';
 
 @Component({
     selector: 'app-new-moment',
     standalone: true,
     templateUrl: './new-moment.component.html',
     styleUrl: './new-moment.component.css',
-    imports: [MomentFormComponent]
+    imports: [MomentFormComponent],
+    providers: [MomentService],
 })
 export class NewMomentComponent {
   btnText = "Compartilhar!"
+
+  constructor(private momentService: MomentService) {}
 
   async createHandler(moment: Moment) {
     const formData = new FormData()
@@ -21,6 +25,8 @@ export class NewMomentComponent {
     if(moment.image) {
       formData.append('image', moment.image)
     }
+
+    await this.momentService.createMoment(formData).subscribe();
   }
 
 }
