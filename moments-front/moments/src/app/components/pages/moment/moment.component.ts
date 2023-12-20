@@ -8,15 +8,25 @@ import { MomentService } from '../../../services/moment.service';
 
 import { Moment } from '../../../Moment';
 
+import { environment } from '../../../../environments/environments';
+
+import { faTimes, faEdit } from '@fortawesome/free-solid-svg-icons';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @Component({
   selector: 'app-moment',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './moment.component.html',
   styleUrl: './moment.component.css'
 })
 export class MomentComponent implements OnInit {
   moment?: Moment;
+  baseApiUrl: string = environment.baseApiUrl;
+
+  faTimes = faTimes;
+  faEdit = faEdit;
 
   constructor(private momentService: MomentService, private route: ActivatedRoute) { }
 
