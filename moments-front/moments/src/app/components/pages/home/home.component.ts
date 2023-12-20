@@ -12,10 +12,12 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule } from '@angular/router';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FontAwesomeModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -25,6 +27,9 @@ export class HomeComponent implements OnInit{
   moments: Moment[] = [];
   baseApiUrl: string = environment.baseApiUrl;
   
+  faSearch = faSearch;
+  searchTerm: string = '';
+
   constructor(private momentService: MomentService) { }
 
   ngOnInit(): void {
