@@ -10,4 +10,6 @@ import { AppRoutingModule } from '../../app.routes';
 })
 export class HeaderComponent {
 
+  
+  constructor() { }
 }
