@@ -44,4 +44,8 @@ export class HomeComponent implements OnInit{
       this.moments = data;
     })
   }
+
+  search(event: any): void {
+
+  }
 }
