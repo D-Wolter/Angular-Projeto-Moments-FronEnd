@@ -45,7 +45,18 @@ export class HomeComponent implements OnInit{
     })
   }
 
-  search(event: any): void {
+  search(e: Event): void {
 
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+
+    if (value) {
+      this.moments = this.allMoments.filter((item) => {
+        return item.title.toLowerCase().includes(value.toLowerCase());
+      })
+    } else {
+      this.moments = this.allMoments;
+    }
   }
 }
