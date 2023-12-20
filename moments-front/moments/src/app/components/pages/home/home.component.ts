@@ -8,10 +8,12 @@ import { environment } from '../../../../environments/environments';
 
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
