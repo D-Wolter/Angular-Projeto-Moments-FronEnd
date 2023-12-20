@@ -21,7 +21,18 @@ export class HomeComponent implements OnInit{
   moments: Moment[] = [];
   baseApiUrl: string = environment.baseApiUrl;
   
-  constructor() { }
+  constructor(private momentService: MomentService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.momentService.getMoments().subscribe((items) => {
+      const data = items.data;
+
+      data.map((item) => {
+        item.created_at = new Date(item.created_at!).toLocaleDateString('pt-Br')
+      })
+
+      this.allMoments = data;
+      this.moments = data;
+    })
+  }
 }

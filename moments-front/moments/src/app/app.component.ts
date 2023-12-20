@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessagesComponent } from "./components/messages/messages.component";
+import { HomeComponent } from './components/pages/home/home.component';
+import { MomentService } from './services/moment.service';
 
 
 @Component({
@@ -24,8 +26,10 @@ import { MessagesComponent } from "./components/messages/messages.component";
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
-        MessagesComponent
-    ]
+        MessagesComponent,
+        HomeComponent,
+    ],
+    providers: [MomentService],
 })
 
 export class AppComponent {
