@@ -14,7 +14,7 @@ import { MomentService } from '../../../services/moment.service';
   styleUrl: './edit-moment.component.css'
 })
 export class EditMomentComponent implements OnInit{
-  moment?: Moment;
+  moment!: Moment;
   btnText: string = 'editar';
 
   constructor(

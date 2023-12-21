@@ -1,5 +1,6 @@
 <div class="moment" *ngIf="moment">
     <h1>{{moment.title}}</h1>
+    <h1>{{moment.id}}</h1>
     <img 
     src="{{baseApiUrl}}uploads/{{moment.image}}" alt="{{moment.title}}">
     <div class="about-moment">
@@ -8,7 +9,7 @@
     </div>
     <div class="actions">
         <h3>Ações: </h3>
-        <a [routerLink]="['/moments/edit/{{moment.id}}']" routerLinkActive="router-link-active" class="edit-btn">
+        <a [routerLink]="['/moments/edit', moment.id]" routerLinkActive="router-link-active" class="edit-btn">
             <fa-icon [icon]="faEdit"></fa-icon> Editar
         </a>
         <button class="remove-btn" title="delete" (click)="removeHandler(moment.id!)">
