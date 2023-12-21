@@ -12,5 +12,6 @@ Para rodar aplicação front-end,
 npm install,
 ng serve,
 
+<img src='./moments-front/moments/src/assets/2023-12-21 (1).png'/>
 
 
