@@ -5,13 +5,14 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Moment } from '../../../Moment';
 
 import { MomentService } from '../../../services/moment.service';
+import { MomentFormComponent } from "../../moment-form/moment-form.component";
 
 @Component({
-  selector: 'app-edit-moment',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './edit-moment.component.html',
-  styleUrl: './edit-moment.component.css'
+    selector: 'app-edit-moment',
+    standalone: true,
+    templateUrl: './edit-moment.component.html',
+    styleUrl: './edit-moment.component.css',
+    imports: [RouterModule, MomentFormComponent]
 })
 export class EditMomentComponent implements OnInit{
   moment!: Moment;
