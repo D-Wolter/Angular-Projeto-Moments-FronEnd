@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormGroup, FormControl, Validators, FormGroupDirective  } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormGroupDirective, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MomentService } from '../../../services/moment.service';
@@ -21,7 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-moment',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, RouterModule, HttpClientModule, ],
+  imports: [CommonModule, FontAwesomeModule, RouterModule, HttpClientModule, ReactiveFormsModule ],
   templateUrl: './moment.component.html',
   styleUrl: './moment.component.css',
   providers: [CommentService]
@@ -65,6 +65,10 @@ export class MomentComponent implements OnInit {
     this.messagesService.add('Momento excluido com sucesso!')
 
     this.router.navigate(['/']);
+  }
+
+  onSubmit(formDirective: FormGroupDirective) {
+
   }
 }
 
