@@ -13,11 +13,12 @@ import { environment } from '../../environments/environments';
 })
 export class CommentService {
   private baseUrl = environment.baseApiUrl;
-  private apiUrl = `${this.baseUrl}api/moments/comments`;
+  private apiUrl = `${this.baseUrl}api/moments`;
 
   constructor(private http: HttpClient) { }
 
   createComment(data: Coment): Observable<Response<Coment>> {
-    return this.http.post<Response<Coment>>(this.apiUrl, data);
+    const url = `${this.apiUrl}/${data.momentId}/comments`;
+    return this.http.post<Response<Coment>>(url, data);
   }
 }
