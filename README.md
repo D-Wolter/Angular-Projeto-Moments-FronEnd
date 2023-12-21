@@ -13,7 +13,6 @@ npm install,
 ng serve,
 
 <img src='./moments-front/moments/src/assets/2023-12-21 (1).png'/>
-<img src='./moments-front/moments/src/assets/2023-12-21 (2).png'/>
 <img src='./moments-front/moments/src/assets/2023-12-21 (3).png'/>
 <img src='./moments-front/moments/src/assets/2023-12-21.png'/>
 
