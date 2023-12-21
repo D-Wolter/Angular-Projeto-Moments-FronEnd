@@ -1,7 +1,9 @@
+import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormGroup, FormControl, Validators, FormGroupDirective  } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MomentService } from '../../../services/moment.service';
 import { MessagesService } from '../../../services/messages.service';
@@ -15,12 +17,14 @@ import { environment } from '../../../../environments/environments';
 import { faTimes, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
 @Component({
   selector: 'app-moment',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, RouterModule],
+  imports: [CommonModule, FontAwesomeModule, RouterModule, HttpClientModule, ],
   templateUrl: './moment.component.html',
-  styleUrl: './moment.component.css'
+  styleUrl: './moment.component.css',
+  providers: [CommentService]
 })
 export class MomentComponent implements OnInit {
   moment?: Moment;
@@ -63,3 +67,5 @@ export class MomentComponent implements OnInit {
     this.router.navigate(['/']);
   }
 }
+
+

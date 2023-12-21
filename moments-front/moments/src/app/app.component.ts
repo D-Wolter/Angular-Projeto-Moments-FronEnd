@@ -28,8 +28,9 @@ import { MomentService } from './services/moment.service';
         ReactiveFormsModule,
         MessagesComponent,
         HomeComponent,
+        
     ],
-    providers: [MomentService],
+    providers: [MomentService, HttpClientModule],
 })
 
 export class AppComponent {
