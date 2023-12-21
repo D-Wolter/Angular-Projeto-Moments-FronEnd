@@ -7,12 +7,6 @@ Projetos Moments em Angular,
 Aplicação Back-end Momens em Adonis.
 https://github.com/D-Wolter/api-adonis-moment-backend,
 
-Para rodar aplicação backend é nescessário rodar,
-
-npm install,
-npm run dev,
-
-
 Para rodar aplicação front-end,
 
 npm install,
